@@ -1,0 +1,9 @@
+/.dart_tool/
+/.flutter-plugins-dependencies
+/build/
+/android/.gradle/
+/android/.kotlin/
+/android/local.properties
+*.iml
+/Admin/bin/
+/Admin/obj/

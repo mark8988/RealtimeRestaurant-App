@@ -1,0 +1,18 @@
+name: realtime_restaurant
+description: Voice menu assistant for restaurant entrance tablets.
+publish_to: none
+version: 0.1.0+1
+environment:
+  sdk: ^3.13.5
+dependencies:
+  flutter:
+    sdk: flutter
+  record: ^7.1.2
+  onnxruntime_v2: ^1.23.2+2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/silero_vad/silero_vad.onnx

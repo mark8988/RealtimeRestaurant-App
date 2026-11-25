@@ -1,0 +1,10 @@
+@model MenuDraft
+@{ ViewData["Title"] = "菜單管理"; }
+<section class="page-head"><div><p class="eyebrow">已發布 v@Model.Version</p><h1>菜單草稿</h1></div>
+<div class="actions"><a class="button" asp-action="CreatePage" data-editor>新增餐點</a>
+<form asp-action="Publish" method="post" data-confirm="發布後，入口平板即可取得這一版菜單。確定發布？">
+    <input type="hidden" name="revision" value="@Model.Revision"><button class="primary">發布菜單</button>
+</form></div></section>
+@if (TempData["Notice"] is string message) { <p class="notice" role="status">@message</p> }
+<partial name="_ListView" model="Model"/>
+<dialog id="editor-dialog" aria-labelledby="editor-title"><div id="editor-content"></div></dialog>

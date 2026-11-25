@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>@ViewData["Title"] · 餐桌手記</title>
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true">
+    <script src="~/js/admin.js" asp-append-version="true" defer></script>
+</head>
+<body>
+@if (User.Identity?.IsAuthenticated == true)
+{
+    <div class="shell">
+        <partial name="_Navbar"/>
+        <div class="content"><header><span>店務後台</span><div class="account">@User.Identity.Name
+            <form asp-controller="Backend" asp-action="Logout" method="post"><button class="quiet">登出</button></form>
+        </div></header>
+        <main>@RenderBody()</main></div>
+    </div>
+}
+else
+{
+    <main class="signin">@RenderBody()</main>
+}
+</body></html>

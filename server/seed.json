@@ -1,0 +1,32 @@
+[
+  {
+    "id": "chicken-rice", "name": "鹽麴烤雞定食", "category": "定食", "price": 280, "available": true,
+    "description": "鹽麴醃漬的雞腿烤至金黃，搭配白飯、時蔬與味噌湯。",
+    "tags": ["雞肉", "不辣", "招牌"], "allergens": ["大豆"]
+  },
+  {
+    "id": "mushroom-rice", "name": "野菇炊飯", "category": "主食", "price": 220, "available": true,
+    "description": "香菇與杏鮑菇搭配昆布高湯炊煮，拌入毛豆，米飯帶有淡淡菇香。",
+    "tags": ["全素", "不辣", "清爽"], "allergens": ["大豆"]
+  },
+  {
+    "id": "sesame-noodles", "name": "花椒芝麻拌麵", "category": "主食", "price": 190, "available": true,
+    "description": "芝麻醬拌小麥麵條，搭配花椒油與小黃瓜絲。",
+    "tags": ["微辣", "芝麻"], "allergens": ["芝麻", "小麥", "大豆"]
+  },
+  {
+    "id": "tofu", "name": "柚香冷豆腐", "category": "小菜", "price": 90, "available": true,
+    "description": "嫩豆腐搭配柚子醬與蘿蔔泥，冰涼清爽。",
+    "tags": ["清爽", "不辣"], "allergens": ["大豆"]
+  },
+  {
+    "id": "oolong", "name": "冷泡烏龍", "category": "飲品", "price": 80, "available": true,
+    "description": "台灣烏龍茶冷泡，帶有淡淡花香。",
+    "tags": ["無糖", "全素", "不辣"], "allergens": []
+  },
+  {
+    "id": "pudding", "name": "黑糖手作布丁", "category": "甜點", "price": 100, "available": true,
+    "description": "雞蛋與鮮奶蒸製，淋上黑糖糖漿。",
+    "tags": ["蛋奶素", "不辣"], "allergens": ["蛋", "奶"]
+  }
+]

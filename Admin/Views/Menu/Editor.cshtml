@@ -1,0 +1,6 @@
+@model ItemForm
+@{
+    ViewData["Title"] = Model.Id == null ? "新增餐點" : "編輯餐點";
+    if (Context.Request.Headers["X-Requested-With"] == "XMLHttpRequest") { Layout = null; }
+}
+<section class="editor"><h1 id="editor-title">@ViewData["Title"]</h1><partial name="_ItemForm" model="Model"/></section>

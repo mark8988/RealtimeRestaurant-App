@@ -1,0 +1,16 @@
+@model MenuDraft
+<div class="table-wrap"><table><caption>餐點清單 · @Model.Items.Count 道</caption>
+<thead><tr><th>餐點名稱</th><th>分類</th><th>價格</th><th>供應狀態</th><th>操作</th></tr></thead>
+<tbody>@foreach (var item in Model.Items) {
+    <tr><th scope="row">@item.Name</th><td>@item.Category</td><td>NT$ @item.Price</td>
+    <td><form asp-action="Toggle" method="post"><input type="hidden" name="id" value="@item.Id">
+        <input type="hidden" name="revision" value="@Model.Revision">
+        <button class="state @(item.Available ? "on" : "off")" aria-label="切換 @item.Name 供應狀態">@(item.Available ? "供應中" : "已售完")</button>
+    </form></td>
+    <td><div class="actions"><a asp-action="UpdatePage" asp-route-id="@item.Id" data-editor>編輯</a>
+        <form asp-action="Delete" method="post" data-confirm="確定從草稿移除這道餐點？">
+            <input type="hidden" name="id" value="@item.Id"><input type="hidden" name="revision" value="@Model.Revision">
+            <button class="remove">移除</button></form></div></td></tr>
+}</tbody></table>
+@if (Model.Items.Count == 0) { <p class="blank">草稿尚無餐點，請選擇「新增餐點」。</p> }
+</div>

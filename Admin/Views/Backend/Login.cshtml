@@ -1,0 +1,8 @@
+@{ ViewData["Title"] = "店員登入"; }
+<section class="login-card"><p class="brand">餐桌手記</p><h1>店員登入</h1>
+<form method="post" asp-action="Login" class="stack">
+    <div asp-validation-summary="ModelOnly" class="error"></div>
+    <label>管理帳號<input name="username" autocomplete="username" required autofocus></label>
+    <label>密碼<input name="password" type="password" autocomplete="current-password" required></label>
+    <button class="primary">登入後台</button>
+</form></section>

@@ -1,0 +1,13 @@
+@model ItemForm
+<form asp-action="Save" method="post" class="stack">
+    <div asp-validation-summary="All" class="error"></div>
+    <input type="hidden" asp-for="Id"><input type="hidden" asp-for="Revision">
+    <label>餐點名稱<input asp-for="Name" maxlength="80" required></label>
+    <div class="pair"><label>分類<input asp-for="Category" maxlength="40" required></label>
+    <label>價格（新台幣）<input asp-for="Price" type="number" min="0" max="999999" step="1" required></label></div>
+    <label>餐點介紹<textarea asp-for="Description" maxlength="600" rows="3" required></textarea></label>
+    <label>特色標籤<input asp-for="Tags" placeholder="全素、不辣、清爽"></label>
+    <label>已知過敏原<input asp-for="Allergens" placeholder="大豆、小麥"></label>
+    <label class="check"><input asp-for="Available"> 目前供應</label>
+    <div class="actions"><button class="primary">儲存草稿</button><a asp-action="Index" data-cancel>返回菜單</a></div>
+</form>
